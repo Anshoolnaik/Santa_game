@@ -1,0 +1,32 @@
+{
+  "name": "secret-santa",
+  "version": "1.0.0",
+  "description": "Secret Santa assignment engine — assigns each employee a unique secret child while honouring self-assignment and previous-year constraints.",
+  "type": "module",
+  "main": "dist/index.js",
+  "bin": {
+    "secret-santa": "./src/cli.ts"
+  },
+  "scripts": {
+    "start": "tsx src/cli.ts",
+    "assign": "tsx src/cli.ts --employees data/employees.csv --previous data/previous-year-assignments.csv --output data/assignments.csv",
+    "assign:pick": "tsx src/interactive.ts",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit",
+    "build": "tsc"
+  },
+  "keywords": [
+    "secret-santa",
+    "assignment",
+    "bipartite-matching"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^22.20.0",
+    "tsx": "^4.23.0",
+    "typescript": "^5.9.3",
+    "vitest": "^3.2.6"
+  }
+}

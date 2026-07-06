@@ -1,0 +1,8 @@
+node_modules/
+dist/
+coverage/
+*.log
+.DS_Store
+
+# Generated output (keep sample inputs, ignore generated assignments)
+data/assignments.csv
